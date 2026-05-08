@@ -1,7 +1,6 @@
 'use client';
 import { FriendContext } from "@/components/FriendsProvider";
 import Image from "next/image";
-import { useContext, useState } from "react";
 
 
 const TimeLinePage = () => {
@@ -9,11 +8,6 @@ const TimeLinePage = () => {
     const { friends } = useContext(FriendContext)
     console.log(friends, 'show me')
     console.log(friends[1])
-
-    const [filter, setFilter] = useState("");
-    
-    const filterTimeline = filter === "all" ? friends : friends.filter(item => item.id === filter);
-    console.log(filterTimeline,"filter is ok")
     return (
 
         <div className="bg-base-200 p-4 h-min-screen mb-40 w-11/12 mx-auto">
