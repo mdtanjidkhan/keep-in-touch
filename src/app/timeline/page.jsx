@@ -23,18 +23,7 @@ const TimeLinePage = () => {
                     <li onClick={()=> setFilter('all')}><a>All</a></li>
                 </ul>
             </div>
-             {
-        filterTimeline.map(item => (
-          <div
-            key={item.id}
-            className="border p-3 rounded mb-3"
-          >
-            <h2>{item.name}</h2>
-            <p>{item. friends.action}</p>
-             <p className="text-gray-400 font-medium text-xl">{new Date().toLocaleDateString('en-Bd')}</p>
-          </div>
-        ))
-      }
+        
               <div className="">
                   {
                    friends.length === 0 ? <div className="px-5 py-3 bg-white w-full rounded-2xl shadow-md flex justify-center items-center">
