@@ -17,10 +17,10 @@ const TimeLinePage = () => {
             <div className="dropdown dropdown-bottom">
                 <div tabIndex={0} role="button" className="btn m-1">Click ⬇️</div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li onClick={()=>setFilter('call')}><a>Call</a></li>
-                    <li onClick={()=> setFilter('text')}><a>Text</a></li>
-                    <li onClick={()=>setFilter('video')}><a>Video</a></li>
-                    <li onClick={()=> setFilter('all')}><a>All</a></li>
+                    <li><a>Call</a></li>
+                    <li><a>Text</a></li>
+                    <li><a>Video</a></li>
+                    <li><a>All</a></li>
                 </ul>
             </div>
         
