@@ -1,6 +1,7 @@
 'use client';
 import { FriendContext } from "@/components/FriendsProvider";
 import Image from "next/image";
+import { useContext } from "react";
 
 const TimeLinePage = () => {
 
@@ -22,28 +23,27 @@ const TimeLinePage = () => {
                     <li><a>All</a></li>
                 </ul>
             </div>
-          
-          
-              <div className="">
-                  {
-                   friends.length === 0 ? <div className="px-5 py-3 bg-white w-full rounded-2xl shadow-md flex justify-center items-center">
-                    <h2 className="text-xl font-bold p-8 text-gray-400">No calls yet!</h2>
-                   </div>
-                    : <>
-                    {
-                        friends.map((friend, i)=> <div key={i}>
-                            <div className="p-8 bg-white rounded-2xl shadow-2xl mb-3 space-y-2">
-                                
-                                <Image width={50} height={40} src={friend.action} alt="" />
-                                <h3 className="font-bold text-xl">With: {friend.name}</h3>
-                                {/* <p>with:{}</p> */}
-                                <p className="text-gray-400 font-medium text-xl">{new Date().toLocaleDateString('en-Bd')}</p>
-                            </div>
-                        </div>)
-                    }
-                    </>
-                  }
-              </div>
+
+            <div className="">
+                {
+                    friends.length === 0 ? <div className="px-5 py-3 bg-white w-full rounded-2xl shadow-md flex justify-center items-center">
+                        <h2 className="text-xl font-bold p-8 text-gray-400">No calls yet!</h2>
+                    </div>
+                        : <>
+                            {
+                                friends.map((friend, i) => <div key={i}>
+                                    <div className="p-8 bg-white rounded-2xl shadow-2xl mb-3 space-y-2">
+
+                                        <Image width={50} height={40} src={friend.action} alt="" />
+                                        <h3 className="font-bold text-xl">With: {friend.name}</h3>
+                                        {/* <p>with:{}</p> */}
+                                        <p className="text-gray-400 font-medium text-xl">{new Date().toLocaleDateString('en-Bd')}</p>
+                                    </div>
+                                </div>)
+                            }
+                        </>
+                }
+            </div>
 
         </div>
 
