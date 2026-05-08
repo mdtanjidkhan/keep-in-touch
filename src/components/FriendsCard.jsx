@@ -9,7 +9,7 @@ const statusclors = {
 
 const FriendsCard = ({ friend }) => {
     return (
-        <div className="bg-white p-8 rounded-md shadow-md mt-5 flex flex-col items-center justify-center">
+        <div className="bg-white p-8 rounded-md shadow-md mt-5 flex flex-col items-center justify-center hover:drop-shadow-lg transition-all duration-400 hover:translate-y-2 cursor-pointer">
             <Image
                 src={friend.picture}
                 alt={friend.name}

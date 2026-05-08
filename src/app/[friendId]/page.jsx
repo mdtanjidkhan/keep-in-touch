@@ -1,7 +1,9 @@
 
+import FriendDetails from "@/components/FriendDetails";
 
 
-  const friends = [
+
+const friends = [
   {
     "id": 1,
     "name": "Arafat Rahman",
@@ -124,16 +126,19 @@
   }
 ];
 
-const FriendDetailPage =async({params}) => {
-    const {friendId}= await params;
-    const friend = friends.find(f => f.id === parseInt(friendId));
-    console.log(friendId, 'show me params');
-    const {name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date} = friend;
-    return (
-        <div>
-            <h3>{name}</h3>
-        </div>
-    );
+
+
+const FriendDetailPage = async ({ params }) => {
+  const { friendId } = await params;
+  // const res = await fetch(`data.json/${friendId}`)
+  // const friends = await res.json();
+  const friend = friends.find(f => f.id === parseInt(friendId));
+  console.log(friendId, 'show me params');
+  
+
+  return (
+       <FriendDetails  friend={friend}></FriendDetails>
+  );
 };
 
 export default FriendDetailPage;
