@@ -130,8 +130,6 @@ const friends = [
 
 const FriendDetailPage = async ({ params }) => {
   const { friendId } = await params;
-  // const res = await fetch(`data.json/${friendId}`)
-  // const friends = await res.json();
   const friend = friends.find(f => f.id === parseInt(friendId));
   console.log(friendId, 'show me params');
   
